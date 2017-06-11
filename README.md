@@ -17,6 +17,7 @@
 
 We have changed role and commit changes we must create new tag for this version. 
 ```
+git push origin role_branch
 git tag role_name-vX.Y.Z
 git push origin role_name-vX.Y.Z
 ```
