@@ -30,6 +30,7 @@ Current versions list: `git tag`
 For example we want to execute http playbook. The role depends on `common` and `sshd` roles.  
 ```
 #git tag
+ansible_vars-v1.0.0
 common-v1.0.0
 common-v1.0.1
 httpd-v1.0.0
@@ -38,7 +39,14 @@ sshd-v1.0.0
 ```
 Checkout to httpd role:  
 ```
+cd /root/ansible-versioning
 git checkout httpd-v1.0.0
+```
+Download ansible variables:  
+```
+git clone https://github.com/pymag09/ansible-versioning.git hosts
+cd hosts
+git checkout ansible_vars-v1.0.0
 ```
 Use python virtual environment:
 ```
@@ -54,7 +62,7 @@ Download dependencies:
 ```
 Execute playbook:  
 ```
-ansible-playbook -i "localhost," playbook.yml 
+ansible-playbook -i hosts/localhost playbook.yml 
 ```
 In multi tenant environment the process might be following:  
 ```
@@ -62,6 +70,10 @@ tmpdir=$(mktemp -d)
 cd $tmpdir
 git clone https://github.com/pymag09/ansible-versioning.git
 cd ansible-versioning
+git clone https://github.com/pymag09/ansible-versioning.git hosts
+cd hosts
+git checkout ansible_vars-v1.0.0
+cd ..
 git checkout httpd-v1.0.0
 workon ansible-2.2.2
 ansible-galaxy install -r requirements.yaml -p .
