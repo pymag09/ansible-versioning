@@ -1,0 +1,6 @@
+---
+
+- src: git+https://github.com/pymag09/quick_example.git
+  version: common-v1.0.1
+  scm: git
+  name: common
