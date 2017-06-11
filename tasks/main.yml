@@ -1,0 +1,5 @@
+---
+# tasks file for common
+- name: Install common packages v1.0.0
+  debug:
+    msg: "apt install -y mc git openssl consul"
