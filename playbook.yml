@@ -1,6 +1,6 @@
 ---
 
-- hosts: localhost
+- hosts: local
   connection: local
   roles:
     - { role: httpd }
