@@ -1,0 +1,6 @@
+---
+# tasks file for sshd
+
+- name: Configure sshd v1.0.0
+  debug:
+    msg: "uploading sshd config"
