@@ -22,9 +22,11 @@ git push origin role_name-vX.Y.Z
 ```
 Current versions list: `git tag`  
   
-# Prepare playbook for execution.  
+## Prepare playbook for execution in local environment
 
-For examaple we want to execute http playbook. The role depends on `common` and `sshd` roles.  
+`vagrant up`
+
+For example we want to execute http playbook. The role depends on `common` and `sshd` roles.  
 ```
 #git tag
 common-v1.0.0
