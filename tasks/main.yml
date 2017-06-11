@@ -1,0 +1,6 @@
+---
+# tasks file for qe_apache
+
+- name: Installing apache
+  debug:
+    msg: "Apache installed v1.0.0"
