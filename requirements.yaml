@@ -1,10 +1,10 @@
 ---
 
-- src: git+https://github.com/pymag09/quick_example.git
+- src: https://github.com/pymag09/ansible-versioning.git
   version: common-v1.0.0
   scm: git
   name: common
-- src: https://github.com/pymag09/quick_example.git
+- src: https://github.com/pymag09/ansible-versioning.git
   name: sshd
   scm: git
   version: sshd-v1.0.0
