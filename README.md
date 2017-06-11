@@ -33,7 +33,7 @@ httpd-v1.0.0
 sshd-v1.0.0
 
 ```
-Chechout to httpd role:  
+Checkout to httpd role:  
 ```
 git checkout httpd-v1.0.0
 ```
@@ -43,19 +43,26 @@ workon ansible-2.2.2
 ```
 Download dependencies:  
 ```
-ansible-galaxy install -r requirements.yaml -p ./
+# ansible-galaxy install -r requirements.yaml -p .
+- extracting common to ./common
+- common was installed successfully
+- extracting sshd to ./sshd
+- sshd was installed successfully
 ```
 Execute playbook:  
 ```
 ansible-playbook -i "localhost," playbook.yml 
 ```
-In multi tenant environment the process might be followong:  
+In multi tenant environment the process might be following:  
 ```
-tmpdir=$(mktemp)
+tmpdir=$(mktemp -d)
 cd $tmpdir
 git clone https://github.com/pymag09/ansible-versioning.git
-git chechout httpd-v1.0.0
-ansible-galaxy install -r requirements.yaml -p ./
+cd ansible-versioning
+git checkout httpd-v1.0.0
+workon ansible-2.2.2
+ansible-galaxy install -r requirements.yaml -p .
 ansible-playbook -i "localhost," playbook.yml 
-rm -R $tmpdir
+rm -fR $tmpdir
 ```
+or ansible playbook can be executed inside docker container which will be killed after execution
