@@ -1,5 +1,5 @@
 ---
 # tasks file for common
-- name: Install common packages v1.0.0
+- name: Install common packages v1.0.1
   debug:
-    msg: "apt install -y mc git openssl consul"
+    msg: "apt install -y mc git openssl consul openjdk-8-jdk"

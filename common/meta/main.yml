@@ -4,4 +4,6 @@ galaxy_info:
   company: your company (optional)
   license: license (GPLv2, CC-BY, etc)
   min_ansible_version: 1.2
+  galaxy_tags:
+    - common-v1.0.1
 dependencies: []
