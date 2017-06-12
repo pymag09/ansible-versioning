@@ -65,6 +65,8 @@ Execute playbook:
 ```
 ansible-playbook -i hosts/localhost playbook.yml 
 ```
+After that try to change version `version: common-v1.0.1` in requirements.yaml and run ansible-galaxy install --force -r requirements.yaml -p . one more time.  
+  
 In multi tenant environment the process might be following:  
 ```
 tmpdir=$(mktemp -d)
