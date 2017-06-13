@@ -43,12 +43,6 @@ Checkout to httpd role:
 cd /root/ansible-versioning
 git checkout httpd-v1.0.0
 ```
-Download ansible variables:  
-```
-git clone https://github.com/pymag09/ansible-versioning.git hosts
-cd hosts
-git checkout ansible_vars-v1.0.0
-```
 Use python virtual environment:
 ```
 workon ansible-2.2.2
@@ -73,10 +67,6 @@ tmpdir=$(mktemp -d)
 cd $tmpdir
 git clone https://github.com/pymag09/ansible-versioning.git
 cd ansible-versioning
-git clone https://github.com/pymag09/ansible-versioning.git hosts
-cd hosts
-git checkout ansible_vars-v1.0.0
-cd ..
 git checkout httpd-v1.0.0
 workon ansible-2.2.2
 ansible-galaxy install -r requirements.yaml -p .
