@@ -8,3 +8,7 @@
   name: sshd
   scm: git
   version: sshd-v1.0.0
+- src: https://github.com/pymag09/ansible-versioning.git
+  version: ansible_vars-v1.0.0
+  scm: git
+  name: hosts
