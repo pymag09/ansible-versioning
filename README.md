@@ -1,11 +1,11 @@
 # ANSIBLE VERSIONING
 
 ## Table of contents  
-  
-  * [What do you need to know about this solution?](#What-do-you-need-to-know-about-this-solution?)
-  * [Creating new role version](#Creating-new-role-version)
-  * [Prepare playbook for execution in local environment](#Prepare-playbook-for-execution-in-local-environment)
-  * [DOCKER](#DOCKER)
+  * [Why versioning is important?](#why-versioning-is-important)
+  * [What do you need to know about this solution?](#what-do-you-need-to-know-about-this-solution)
+  * [Creating new role version](#creating-new-role-version)
+  * [Prepare playbook for execution in local environment](#prepare-playbook-for-execution-in-local-environment)
+  * [DOCKER](#docker)
 
 ## Why versioning is important?  
 
