@@ -5,7 +5,7 @@ sys_update() {
 }
 
 install_pkgs(){
-	apt install -y mc python-pip libssl-dev git
+	apt install -y mc python-pip libssl-dev git docker.io
 }
 
 install_python_venv(){
@@ -29,8 +29,14 @@ download_poc_repo(){
 	cd /root && git clone https://github.com/pymag09/ansible-versioning.git
 }
 
+build_docker_image(){
+    cd /vagrant/docker && \
+    docker build -t ansible-run:latest .
+}
+
 sys_update
 install_pkgs
 install_python_venv
 install_ansible_in_penv
 download_poc_repo
+build_docker_image
