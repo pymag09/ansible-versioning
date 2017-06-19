@@ -16,8 +16,7 @@
   
 ## What do you need to know about this solution?  
   
-* To behave like normal repo with roles and playbooks, branches are used. Sometimes you can not create as many repos as you want but you can create as many branches as you need. 
-__ *repo per role* solution also is available. Particularly when you use atlassian stash (project + repo). For demo purpose and any other special cases it couldbe multi branch repo.__  
+* To behave like normal repo with roles and playbooks, branches are used. Sometimes you can not create as many repos as you want but you can create as many branches as you need. **repo per role solution also is available. Particularly when you use atlassian stash (project + repo). For demo purpose and any other special cases it couldbe multi branch repo.**  
 ![ansible repo](images/repo.png)  
 * Every potentially releasable version must be tagged. This is the key and most important moment.  
 * We need to know how ansible-galaxy works  
