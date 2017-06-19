@@ -11,12 +11,12 @@
 
 * While developing role you can be sure that old version is available and your changes are not affecting production version of role. So you will not break production  
 * In case of trouble you can quickly install old version. Which reduce possible downtime.  
-* You can use different version prod env and stage and so on.
+* You can use different version on prod, stage and so on.
 * Consistency and compatibility. Your role depends on other roles. If somebody change the role you depend on it can break something in your code.  
   
 ## What do you need to know about this solution?  
   
-* To behave like normal repo with roles and playbooks, branches are used. Sometimes you can not create as many repos as you want but you can create as many branches as you need. **repo per role solution also is available. Particularly when you use atlassian stash (project + repo). For demo purpose and any other special cases it couldbe multi branch repo.**  
+* To behave like normal repo with roles and playbooks, branches are used. Sometimes you can not create as many repos as you want but you can create as many branches as you need. ** _repo per role_ solution also is available. Particularly when you use atlassian stash (project + repo). For demo purpose and any other special cases it could be multi branch repo.**  
 ![ansible repo](images/repo.png)  
 * Every potentially releasable version must be tagged. This is the key and most important moment.  
 * We need to know how ansible-galaxy works  
