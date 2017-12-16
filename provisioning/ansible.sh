@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sys_update() {	
-	[[ ! -f /etc/updated ]] && apt update && touch /etc/updated	
+sys_update() {
+	[[ ! -f /etc/updated ]] && apt update && touch /etc/updated
 }
 
 install_pkgs(){
@@ -26,7 +26,8 @@ install_ansible_in_penv(){
 }
 
 download_poc_repo(){
-	cd /root && git clone https://github.com/pymag09/ansible-versioning.git
+	mkdir /root/github && cd /root/github && git clone https://github.com/pymag09/ansible-versioning.git
+	mkdir /root/bitbucket && cd /root/bitbucket && git clone https://magelan09@bitbucket.org/pymag09/httpd.git
 }
 
 sys_update
