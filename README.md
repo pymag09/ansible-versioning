@@ -1,10 +1,17 @@
 # ANSIBLE VERSIONING
 
+## Table of contents  
+  * [Why versioning is important?](#why-versioning-is-important)
+  * [What do you need to know about this solution?](#what-do-you-need-to-know-about-this-solution)
+  * [Creating new role version](#creating-new-role-version)
+  * [Prepare playbook for execution in local environment](#prepare-playbook-for-execution-in-local-environment)
+  * [DOCKER](#docker)
+
 ## Why versioning is important?  
 
 * While developing role you can be sure that old version is available and your changes are not affecting production version of role. So you will not break production  
 * In case of trouble you can quickly install old version. Which reduce possible downtime.  
-* You can use different version prod env and stage and so on.
+* You can use different version on prod, stage and so on.
 * Consistency and compatibility. Your role depends on other roles. If somebody change the role you depend on it can break something in your code.  
 
 ## What do you need to know about this solution?  
@@ -27,8 +34,11 @@ Current versions list: `git tag`
 
 ## Prepare playbook for execution in local environment
 
-`vagrant up`
-
+```
+vagrant up  
+vagrant ssh
+```
+  
 For example we want to execute http playbook. The role depends on `common` and `sshd` roles.  
 Use python virtual environment:
 ```
@@ -74,5 +84,13 @@ workon ansible-2.2.2
 ansible-galaxy install -r requirements.yaml -p .
 ansible-playbook -i "localhost," playbook.yml
 rm -fR $tmpdir
+```
+  
+## DOCKER  
+  
+Isolation helps us to run different playbooks independently - pure multi-tenant env
+```
+vagrant ssh  
+docker run -it --rm ansible-run httpd-v1.0.0
 ```
 or ansible playbook can be executed inside docker container which will be killed after execution
